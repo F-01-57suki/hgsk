@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Horror Game SUKI - 日記っぽいやつ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+  </head>
+  <body id="cont2">
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+      共通部分ここから
+    *-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+    <header>
+      <h1><a href="index.html">Horror Game SUKI</a></h1>
+      <div>
+        <a href="https://twitter.com/share?text=Horror Game SUKI ｜&url=http://crimsonscar.html.xdomain.jp/hgsk/&hashtags=Horror_Game_SUKI&via=tos" target="_blank">
+          <i class="fab fa-twitter-square fa-fw snsicon"></i>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://crimsonscar.html.xdomain.jp/hgsk/" target="_blank">
+          <i class="fab fa-facebook-square fa-fw snsicon"></i>
+        </a>
+        <a href="https://social-plugins.line.me/lineit/share?url=http://crimsonscar.html.xdomain.jp/hgsk/" target="_blank">
+          <i class="fab fa-line fa-fw snsicon"></i>
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li id="spmenu"></li>
+        <li class="menu">
+          <a href="index.html">
+            <p>TOP<br><span>-トップ画面-</span></p>
+          </a>
+        </li>
+        <li class="menu">
+          <a href="cont_1.html">
+            <p>REVIEW<br><span>-レビュー-</span></p>
+          </a>
+        </li>
+        <li class="nav_now menu">
+          <p>DIARY<br><span>-日記-</span></p>
+        </li>
+        <li class="menu">
+          <a href="mailform.html">
+            <p>CONTACT<br><span>-お問い合わせ-</span></p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+      共通部分ここマデ
+    *-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+    <div id="wrapper">
+      <main>
+        <h2>日記っぽいやつ</h2>
+        <div id="calendar">
+          <div><a href="#">&lt;6月</a></div>
+          <div>
+            <table>
+              <caption>July</caption>
+              <thead>
+                <tr>
+                  <th class="sunday">SUN</th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th class="satday">SAT</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="last_month">27</td>
+                  <td class="last_month">28</td>
+                  <td class="last_month">29</td>
+                  <td class="last_month">30</td>
+                  <td><a href="#d1">1</a></td>
+                  <td><a href="#d2">2</a></td>
+                  <td class="satday"><a href="#d3">3</a></td>
+                </tr>
+                <tr>
+                  <td class="sunday"><a href="#d4">4</a></td>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>8</td>
+                  <td>9</td>
+                  <td class="satday">10</td>
+                </tr>
+                <tr>
+                  <td class="sunday">11</td>
+                  <td>12</td>
+                  <td>13</td>
+                  <td>14</td>
+                  <td>15</td>
+                  <td>16</td>
+                  <td class="satday">17</td>
+                </tr>
+                <tr>
+                  <td class="sunday">18</td>
+                  <td>19</td>
+                  <td>20</td>
+                  <td>21</td>
+                  <td>22</td>
+                  <td>23</td>
+                  <td class="satday">24</td>
+                </tr>
+                <tr>
+                  <td class="sunday">25</td>
+                  <td>26</td>
+                  <td>27</td>
+                  <td>28</td>
+                  <td>29</td>
+                  <td>30</td>
+                  <td class="satday">31</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>8月&gt;</div>
+        </div>
+        <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+        <section class="diary_area" id="d4">
+          <h3 class="diary_h3">今回の制作に関して</h3>
+          <p class="diary_day">― ２０２１．０７．０４</p>
+          <div class="diary_text clearfix">
+            <img src="images/d4.jpg" alt="しちがつよっか" class="img_l">
+            <pre>■頑張った点
+・なるべく同じタグばかり使わず、これまでに習ったタグやプロパティを色々と使うよう心掛けた
+・text-shadowを応用し、縁取りや視覚効果に使ってみた
+・W3Cのチェッカーを活用し、エラーの確認を行った
+
+■反省点
+・レスポンシブを考慮せずに作成し、最後の対応時めちゃくちゃしんどかった
+・付け足し付け足しで書いたので、自分でも何がなんだかわからなくなった
+・最初に仮で付けたidやclassを変えるタイミングを失った
+
+　最初は個人的なサイトを作ろうかと思っていたが、発表があると知って題材に悩んでしまった…。
+　悩んでいる間、題材が影響しない問い合わせ画面を作ったが、もうちょっと画面に工夫できたのではないかと後悔している。
+　お問い合わせ画面とnavがレスポンシブ対応でめちゃくちゃ崩れて具合悪くなった。
+
+　IEは表示崩れがあったり、読み込みに失敗していそうだが、そんなもん使っている側に非があるため問題ない。IE滅ぶべし。南無三。</pre>
+          </div>
+        </section>
+        <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+        <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+        <section class="diary_area" id="d3">
+          <h3 class="diary_h3">この画面について</h3>
+          <p class="diary_day">― ２０２１．０７．０３</p>
+          <div class="diary_text clearfix">
+            <img src="images/d3.jpg" alt="しちがつみっか" class="img_r">
+            <pre>　この画面では、preタグによって書いた文章がそのまま表示されるようになっている。
+　日記を書くなら気軽にタグ不要にしたいためだが、VSCode上で見ると入れ子の線が切れるため非常に見づらい。
+　また、改行時に自動でスペースを入れてくれる機能とpreタグの相性は悪い（メモ帳に文章書いて貼った）
+
+　できれば空行にも下線を出したかったが、方法が思いつかず、背景に画像を置く等の力技になりそうなのでやめた。
+　古びた手帳っぽい感じを出したかった（ホラーといえば手帳である）が、これも凝ると背景画像を作る必要がある気がするのでやめた。生まれる前から使っていたPhotoshop7が壊れたので何もできない。私を置いて逝くなPhotoshop7
+
+　作るページが思いつかなかったので日記ページを作ったが、太古の昔に流行したオタクの個人サイトみたくなってしまった。いまどきはEnterページもリンク集も同盟も無いらしい。老人は驚いた。
+
+　一つのゲームに特化したサイトにすればよかったと思いつつ、画像の引用ルールを守って作るのは流石に大変そうだった。</pre>
+          </div>
+        </section>
+        <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+        <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+        <section class="diary_area" id="d2">
+          <h3 class="diary_h3">ホラーゲーム作りの話</h3>
+          <p class="diary_day">― ２０２１．０７．０２</p>
+          <div class="diary_text clearfix">
+            <img src="images/d2.jpg" alt="しちがつふつか" class="img_l">
+            <pre>ホラーゲームを作る際、ネックとなっているのは以下の二点である。
+・3Dを嗜んでいないこと
+・謎解きを考えられる頭がないこと
+
+　3Dについて。ホラーADVは制作済み、ツクール等を用いることも考えたが、3Dと比較してドットで“怖さ”を表現するのは難しい（気がする）。
+　有名どころだと青鬼や魔女の家だが、演出する恐怖が「追いかけられる」一点となってしまうし、差別化は難しい。もし2Dで作る場合の理想形は、Ibあたりを想定することになりそう（ドホラーではないが、雰囲気やストーリー、演出などがフリーゲームのクオリティではない。ありがとう、いいゲームです）
+
+　謎解きについて。ホラーADVの時に本当に苦しんだ。難しすぎず・簡単すぎず、という塩梅が難しいのは勿論として、単純に頭が悪くて思いつかない。クイズのようにはしたくない、と思うと、なかなか資料に頼るのも難しいので、ホラーゲームの謎解きを考える人ホントにすごいのである。
+
+　作ったゲームは友人にテストプレイしてもらうが、「怖くも難しくもなくてよかった（笑）」と言われ体調を崩した</pre>
+         </div>
+        </section>
+        <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+        <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+        <section class="diary_area" id="d1">
+          <h3 class="diary_h3">最近やっているゲームの話とか（雑談）</h3>
+          <p class="diary_day">― ２０２１．０７．０１</p>
+          <div class="diary_text clearfix">
+            <img src="images/d1.jpg" alt="しちがつついたち" class="img_r">
+            <pre>　最近、ときどきDead by Daylightをやっているが、今までプレイしたどのホラーゲームよりも怖くて難しいので泣いた。
+　幽霊よりゾンビよりクリーチャーより中にリアルヒューマン入っていることが一億倍ホラーである
+
+　モンハンの野良でもスタンプ煽りをされて超怖かった。モンハンはホラーゲーム</pre>
+         </div>
+        </section>
+        <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+      </main>
+    </div>
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+      共通部分ここから
+    *-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+    <footer>
+      <p>Copyright &copy; 2021 Miya</p>
+      <div class="gotop"><a href="#top"><i class="fas fa-arrow-circle-up"></i><span> PAGE TOP</span></a></div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+      //モバイルメニュー
+      const menu=document.getElementsByClassName("menu");
+      const spmenu=document.getElementById("spmenu");
+      let flag=false;
+      spmenu.innerHTML='<p>OPEN&nbsp;<i class="fas fa-grip-lines"></i></p>';
+      //メニュー開閉
+      $("#spmenu").click(function(){
+        if(flag){
+            $(".menu").fadeOut("fast","linear");
+            spmenu.innerHTML='<p>OPEN&nbsp;<i class="fas fa-grip-lines"></i></p>';
+          flag=!flag;
+        }
+        else{
+            $(".menu").fadeIn("fast","linear");
+            spmenu.innerHTML='<p>CLOSE&nbsp;<i class="fas fa-times"></i></p>';
+          flag=!flag;
+        }
+      });
+    </script>
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+      共通部分ここマデ
+    *-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+  </body>
+</html>

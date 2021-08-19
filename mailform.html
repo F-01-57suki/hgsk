@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Horror Game SUKI - お問い合わせ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+  </head>
+  <body id="form">
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+      共通部分ここから
+    *-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+    <header>
+      <h1><a href="index.html">Horror Game SUKI</a></h1>
+      <div>
+        <a href="https://twitter.com/share?text=Horror Game SUKI ｜&url=http://crimsonscar.html.xdomain.jp/hgsk/&hashtags=Horror_Game_SUKI&via=tos" target="_blank">
+          <i class="fab fa-twitter-square fa-fw snsicon"></i>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://crimsonscar.html.xdomain.jp/hgsk/" target="_blank">
+          <i class="fab fa-facebook-square fa-fw snsicon"></i>
+        </a>
+        <a href="https://social-plugins.line.me/lineit/share?url=http://crimsonscar.html.xdomain.jp/hgsk/" target="_blank">
+          <i class="fab fa-line fa-fw snsicon"></i>
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li id="spmenu"></li>
+        <li class="menu">
+          <a href="index.html">
+            <p>TOP<br><span>-トップ画面-</span></p>
+          </a>
+        </li>
+        <li class="menu">
+          <a href="cont_1.html">
+            <p>REVIEW<br><span>-レビュー-</span></p>
+          </a>
+        </li>
+        <li class="menu">
+          <a href="cont_2.html">
+            <p>DIARY<br><span>-日記-</span></p>
+          </a>
+        </li>
+        <li class="nav_now menu">
+          <p>CONTACT<br><span>-お問い合わせ-</span></p>
+        </li>
+      </ul>
+    </nav>
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+      共通部分ここマデ
+    *-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+    <div id="wrapper">
+      <main>
+        <h2>お問い合わせ</h2>
+        <div>
+          <form id="mf"><!--action="" method="POST"-->
+            <table id="mt">
+              <tbody>
+                <tr>
+                  <th>お名前<br><span class="form_hr_span">必須</span></th>
+                  <td><input id="namae" type="text" size="50" required></td>
+                </tr>
+                <tr>
+                  <th>メールアドレス</th>
+                  <td>
+                    <input id="email" type="email" size="50">
+                    <p class="form_p">※返信が必要な場合は、<span class="form_p_span">必ずご入力</span>ください。</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th>URL</th>
+                  <td>
+                    <input id="url" type="url" size="50">
+                  </td>
+                </tr>
+                <tr>
+                  <th>お問い合わせ種別</th>
+                  <td>
+                    <select id="kinds">
+                      <option value="0">ご意見・ご感想</option>
+                      <option value="1">不具合の報告</option>
+                      <option value="2">おすすめあるよ</option>
+                      <option value="3">その他</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th>お問い合わせ内容<br><span class="form_hr_span">必須</span></th>
+                  <td>
+                    <textarea id="message" cols="50" rows="10" maxlength="400" placeholder="400文字以内でご記入ください。" required></textarea>
+                    <p class="form_p">※不具合の報告は、発生画面や現象を詳細にご入力ください。<br>※おすすめは公式やsteamのURLとかあるとうれしい。</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <input id="sbmit" type="submit" value="確認画面">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </main>
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+      共通部分ここから
+    *-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+    <footer>
+      <p>Copyright &copy; 2021 Miya</p>
+      <div class="gotop"><a href="#top"><i class="fas fa-arrow-circle-up"></i><span> PAGE TOP</span></a></div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+      //モバイルメニュー
+      const menu=document.getElementsByClassName("menu");
+      const spmenu=document.getElementById("spmenu");
+      let flag=false;
+      spmenu.innerHTML='<p>OPEN&nbsp;<i class="fas fa-grip-lines"></i></p>';
+      //関数
+      $("#spmenu").click(function(){
+        if(flag){
+            $(".menu").fadeOut("fast","linear");
+            spmenu.innerHTML='<p>OPEN&nbsp;<i class="fas fa-grip-lines"></i></p>';
+          flag=!flag;
+        }
+        else{
+            $(".menu").fadeIn("fast","linear");
+            spmenu.innerHTML='<p>CLOSE&nbsp;<i class="fas fa-times"></i></p>';
+          flag=!flag;
+        }
+      });
+      //メールフォーム確認画面
+      const namae=document.getElementById("namae");
+      const email=document.getElementById("email");
+      const url=document.getElementById("url");
+      const kinds=document.getElementById("kinds");
+      const message=document.getElementById("message");
+      const sbmit=document.getElementById("sbmit");
+      const mt=document.getElementById("mt");
+      const mf=document.getElementById("mf");
+      let beforafter=0;
+      let after="<tbody>";
+      //関数
+      function ffunc(){
+        if(beforafter==0){
+          if(namae.value=="" || message.value==""){
+            return;
+          }
+          else{
+            mt.style.margin="0 auto";
+            mf.style.width="70%";
+            mt.style.width="100%";
+            after+="<tr><th>お名前</th></tr><tr><td>"+namae.value+"</td></tr>";
+            if(email.value==""){
+              after+="<tr><th>メールアドレス</th></tr><tr><td>なし</td></tr>";
+            }
+            else{
+              after+="<tr><th>メールアドレス</th></tr><tr><td>"+email.value+"</td></tr>";
+            }
+            if(url.value==""){
+              after+="<tr><th>URL</th></tr><tr><td>なし</td></tr>";
+            }
+            else{
+              after+="<tr><th>URL</th></tr><tr><td>"+url.value+"</td></tr>";
+            }
+            after+="<tr><th>お問い合わせ種別</th></tr><tr><td>";
+            if(kinds.value==0){
+              after+="ご意見・ご感想";
+            }
+            else if(kinds.value==1){
+              after+="不具合の報告";
+            }
+            else if(kinds.value==2){
+              after+="おすすめあるよ";
+            }
+            else{
+              after+="その他";
+            }
+            after+="</td></tr><tr><th>お問い合わせ内容</th></tr><tr><td>"+message.value+"</td></tr>";
+            after+='<tr><td colspan="2"><input id="sbmit" type="submit" value="戻る"><p class="form_p"><span class="form_p_span">※それっぽいだけで送信はできません！</span></p></td></tr></tbody>';
+            mt.innerHTML=after;
+            beforafter=1;
+         }
+        }
+      }
+      sbmit.onclick=ffunc;
+    </script>
+    <!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+      共通部分ここマデ
+    *-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+  </body>
+</html>

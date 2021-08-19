@@ -1,0 +1,2065 @@
+@charset "UTF-8";
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+全ページ共通
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+/*-* 初期設定 *-*-*-*-*-*-*-*-*-*-*-*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 画像 */
+img{
+  border: 0;
+  vertical-align: top;
+}
+
+/* フォント */
+html{
+  font-size: 62.5%;
+  font-family:"Hiragino Kaku Gothic ProN","ヒラギノ角ゴ proN W3","Yu Gothic","游ゴシック","YuGothic","游ゴシック体","Meiryo","メイリオ",sans-serif;
+  scroll-behavior:smooth;
+}
+
+/* IE対策 */
+main{
+  display: block;
+}
+
+/* テーブル */
+table{
+  border-collapse: collapse;
+}
+
+/* リンク */
+a{
+  color: rgb(0, 51, 102);
+}
+
+/* TOPに戻るリンク */
+.gotop{
+  position: fixed;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.gotop>a{
+  padding-right: 6px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.gotop>a:hover{
+  color: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* ボディ */
+body{
+  font-size: 1.6rem;
+}
+
+body::before{
+  background: url(images/background.jpg) no-repeat center;
+  background-size: cover;
+  content: "";
+  display: block;
+  position: fixed;/* 擬似要素ごと固定 */
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+}
+
+/*-* 中央揃え *-*-*-*-*-*-*-*-*-*-*-*/
+#wrapper{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/*-* ヘッダー *-*-*-*-*-*-*-*-*-*-*-*/
+header{
+  position: relative;
+  display: flex;
+  justify-content:space-between;
+}
+
+header>h1{
+  display: block;
+  position:relative;
+  bottom: 0;
+  text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+header>h1>a{
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.snsicon{
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+  text-shadow: 1px 0 0 rgb(0, 0, 0),0 1px 0 rgb(0, 0, 0),-1px 0 0 rgb(0, 0, 0),0 -1px 0 rgb(0, 0, 0);
+}
+
+.snsicon:hover{
+  opacity: 1.0;
+}
+
+header>div a{
+  text-decoration: none;
+}
+
+/*-* ナビ *-*-*-*-*-*-*-*-*-*-*-*/
+nav{
+  display: flex;
+  background-color: rgb(0, 0, 0);
+}
+
+nav>ul{
+  list-style: none;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+nav li>a{
+  display: block;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 5px rgb(255, 255, 255);
+  text-align: center;
+}
+
+nav li>a:hover{
+  color: rgb(204, 51, 51);
+  text-shadow: 0 0 5px rgb(204, 51, 51);
+/*  background-color: rgb(0, 0, 0);*/
+}
+
+.nav_now{
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  color: rgba(255, 255, 255,0.5);
+  text-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+nav p{
+  vertical-align:top;
+}
+
+nav p>span{
+  vertical-align:top;
+}
+
+/*-* メイン *-*-*-*-*-*-*-*-*-*-*-*/
+main h2{
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 3px rgb(0, 0, 0),0 0 5px rgb(0, 0, 0),0 0 5px rgb(0, 0, 0);
+}
+
+main h3{
+  border-left: 5px solid rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  text-shadow: 1px 0 0 rgb(255, 255, 255), 0 1px 0 rgb(255, 255, 255),-1px 0 0 rgb(255, 255, 255), 0 -1px 0 rgb(255, 255, 255);
+}
+
+/*-* 引用エリア *-*-*-*-*-*-*-*-*-*-*-*/
+.quote_area50 a,.quote_area100 a{
+  color: rgb(0, 51, 102);
+}
+
+.quote_area50,.quote_area100{
+  position: relative;
+  background-color: rgb(153, 153, 153);
+  text-align: center;
+}
+
+.quote_area50::before,.quote_area100::before{
+  display: block;
+  line-height: 0;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 3.0rem;
+  content: "\f10d";
+  text-shadow: 1px 0 0 rgba(255, 255,255, 0.5), 0 1px 0 rgba(255, 255,255, 0.5), -1px 0 0 rgba(255, 255,255, 0.5), 0 -1px 0 rgba(255, 255,255, 0.5);
+  position: absolute;
+}
+
+.quote_area50::after,.quote_area100::after{
+  display: block;
+  line-height: 0;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 3.0rem;
+  content: "\f10e";
+  text-shadow: 1px 0 0 rgba(255, 255,255, 0.5), 0 1px 0 rgba(255, 255,255, 0.5), -1px 0 0 rgba(255, 255,255, 0.5), 0 -1px 0 rgba(255, 255,255, 0.5);
+  position: absolute;
+}
+
+.cite_img{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.cite_img_sh3{
+  text-align: center;
+  width: 50%;
+  height: 100%;
+}
+
+.cite50_p,.cite100_p{
+  font-size: 1.2rem;
+}
+
+.cite50_p>a,.cite100_p>a{
+  color: rgb(0, 51, 102);
+}
+
+.cite50_p{
+  text-align: left;
+  position: absolute;
+}
+
+.cite100_p{
+  text-align: left;
+  position: absolute;
+}
+
+/*-* フッター *-*-*-*-*-*-*-*-*-*-*-*/
+footer{
+  background-color: rgb(0, 0, 0);
+}
+
+footer>p{
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font: bold 1.6rem "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3","Yu Mincho","游明朝","YuMincho","游明朝体","MS PMincho","ＭＳ　Ｐ明朝",serif;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+#index
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+#index main{
+  position: relative;
+}
+
+#index h2>p{
+  text-align: left;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+  position: absolute;
+}
+
+#index table,.cont_info{
+  margin: 0 auto;
+  border-top: 1px solid rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
+
+#index th,#index td,.cont_info th,.cont_info td{
+  border-bottom: 1px solid rgb(153, 153, 153);
+}
+
+#index tr:last-child>th,#index tr:last-child>td,.cont_info tr:last-child>th,.cont_info tr:last-child>td{
+  border: none;
+}
+
+#index th,#cont1 th{
+  text-align: center;
+}
+
+#newsiam{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:space-evenly;
+}
+
+#news{
+  position: relative;
+}
+
+#news>h3 span{
+  display: inline;
+  color: rgb(255, 102, 0);
+}
+#news>h3 a:hover{
+  opacity: 0.5;
+}
+
+ .update,.new,.info{
+  display: block;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.info{
+  background-color: rgb( 153, 0, 51);
+}
+
+.new{
+  background-color: rgb( 51, 102, 153);
+}
+
+.update{
+  background-color: rgb( 51, 153, 51);
+}
+
+
+#news td>a{
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+#news td>a:hover{
+  color: rgb(0, 51, 102);
+  text-decoration: underline;
+}
+
+#oldnews{
+  position: absolute;
+  bottom: 0;
+}
+
+#oldnews a{
+  padding: 2px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb( 51, 51, 51);
+  text-decoration: none;
+}
+
+#oldnews a:hover{
+  opacity: 0.5;
+}
+
+#iam{
+  position: relative;
+  margin: 0 auto;
+}
+
+#iam img{
+  border-radius: 50%;
+}
+
+.prficon{
+  color: rgb(255, 255, 255);
+  position: absolute;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+#iam dl{
+  margin: 0 auto;
+}
+
+#iam dt{
+  text-align: center;
+}
+
+#iam dd{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#iam>dl>dt img:hover{
+  transform:rotate(5deg);
+}
+
+#iam dd>table{
+  margin-top: 25px;
+}
+
+#iam td{
+  text-align: center;
+}
+
+.banner_block{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:space-evenly;
+}
+
+#index h4{
+  text-shadow: 1px 1px 0 rgb(153, 153, 153);
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+#cont1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.cont_evaluation,.cont_info{
+  margin: 0 auto;
+}
+
+.cont_evaluation th{
+  border-style: none;
+}
+
+.cont_evaluation .m1{
+  color: rgb(204, 51, 51);
+  text-shadow: 1px 0 0 rgb(0, 0, 0), 0 1px 0 rgb(0, 0, 0),-1px 0 0 rgb(0, 0, 0), 0 -1px 0 rgb(0, 0, 0);
+}
+.cont_evaluation .m0{
+  color: rgb(153, 153, 153);
+  text-shadow: 1px 0 0 rgb(255, 255, 255), 0 1px 0 rgb(255, 255, 255),-1px 0 0 rgb(255, 255, 255), 0 -1px 0 rgb(255, 255, 255);
+}
+
+#cont1 h4{
+  text-shadow: 1px 1px 0 rgb(153, 153, 153);
+}
+
+.main_text>span{
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+  background-color: rgba(255, 255, 0,0.8);
+}
+
+#contents{
+  border: 1px solid rgb(0, 0, 0);
+}
+
+#contents>ul{
+  list-style: none;
+}
+
+#contents a{
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+#contents a:hover{
+  color: rgb(0, 51, 102);
+  text-decoration: underline;
+}
+
+.li_book i{
+  font-size: 2.0rem;
+  margin-right: 5px;
+}
+.li_none i{
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.li_book{
+  line-height: 1.8;
+  font-size: 2.0rem;
+  font-weight: bold;
+}
+
+.li_none{
+  line-height: 2;
+}
+
+.mada{
+  color: rgb(153, 153, 153);
+}
+
+.steam_widget{
+  margin: 0 auto;
+}
+
+#contents a{
+  text-decoration: none;
+}
+
+.steam_widget{
+  margin: 0 auto;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+#cont2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.diary_area{
+  width: 100%;
+}
+
+.diary_day{
+  font-size: 1.2rem;
+  text-shadow: 0 0 2px rgb(0, 0, 0);
+  text-align: right;
+}
+
+.diary_text{
+  margin: 0 auto;
+  background-color: rgb(204, 204, 153);
+  box-shadow: 4px 4px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#calendar{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#calendar table{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#calendar th,#calendar td{
+  font: bold 1.2rem "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3","Yu Mincho","游明朝","YuMincho","游明朝体","MS PMincho","ＭＳ　Ｐ明朝",serif;
+  text-align: center;
+}
+
+#calendar th{
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+#calendar table caption{
+  font-weight: bold;
+  text-shadow: 1px 0 0 rgb(255, 255, 255),0 1px 0 rgb(255, 255, 255),-1px 0 0 rgb(255, 255, 255),0 -1px 0 rgb(255, 255, 255);
+}
+
+#calendar a{
+  color: rgb(0, 0, 0);
+}
+
+.last_month{
+  color: rgb(204, 204, 204);
+}
+
+#calendar .satday{
+  color: rgb(51, 102, 204);
+}
+
+#calendar .satday>a{
+  color: rgb(51, 102, 204);
+}
+
+#calendar .sunday{
+  color: rgb(204, 51, 51);
+}
+
+#calendar .sunday>a{
+  color: rgb(204, 51, 51);
+}
+
+/* clear-fix */
+.clearfix:after{
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+#form
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+/* 余白の削除 */
+#form textarea,#form tbody tr:nth-child(2) input{
+  display:block;
+}
+
+#form main>div:nth-child(2){
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+}
+
+#form form{
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+}
+
+#form main th{
+  text-align: center;
+}
+#form main tr{
+  text-align: left;
+}
+
+.form_hr_span{
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 0, 0);
+}
+
+.form_p_span{
+  color: rgb(255, 0, 0);
+}
+
+#form main table th{
+  background-color: rgb(204, 204, 204);
+}
+
+#form tbody tr:last-child>td{
+  text-align: center;
+}
+
+.form_p{
+  font-size: 1.3rem;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+#profile
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.clover {
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content:center;
+  width: 50%;
+  margin: 20px auto;
+}
+.clover img {
+  margin: 5px;
+  width: 40%;
+  height: 40%;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+.clover1 {
+  border-radius: 50% 50% 0 50%
+}
+.clover2 {
+  border-radius: 50% 50% 50% 0
+}
+.clover3 {
+  border-radius: 50% 0 50% 50%
+}
+.clover4 {
+  border-radius: 0 50% 50% 50%
+}
+
+#profile::before{
+  background: url(images/prf_background.jpg) no-repeat center;
+  background-size: cover;
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+}
+
+#profile>#wrapper{
+  margin:0 auto;
+  background-color: rgba(255, 255, 255,0.8);
+}
+
+#profile header{
+  position:static;
+  display: block;
+}
+
+#profile header img:hover{
+  opacity: 1;
+}
+
+#profile dl{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+#profile dt{
+  text-align: center;
+  width: 80%;
+  color: rgb(153, 51, 102);
+  font-size: 2.0rem;
+  font-weight: bold;
+  text-shadow: 1px 0 0 rgb(255, 255,255), 0 1px 0 rgb(255, 255,255), -1px 0 0 rgb(255, 255,255), 0 -1px 0 rgb(255, 255,255);
+}
+
+#profile dd{
+  width: 80%;
+  margin: 20px;
+}
+
+#sns_area{
+  display: flex;
+  justify-content:center;
+}
+
+#sns_area>div{
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+}
+
+#sns_area i{
+  width: 50px;
+  height: 50px;
+  line-height: 1.6;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 3.0rem;
+}
+
+#sns_area div:nth-child(1){
+  background-color: rgb(85, 172, 238);
+  margin-left: 10px;
+}
+#sns_area div:nth-child(2){
+  background-color: rgb(49, 80, 150);
+}
+#sns_area div:nth-child(3){
+  background: linear-gradient(135deg, rgb(64, 93, 230), rgb(88, 81, 219), rgb(131, 58, 180), rgb(193, 53, 132), rgb(225, 48, 108), rgb(245, 96, 64), rgb(247, 119, 55), rgb(252, 175, 69), rgb(255, 220, 128));
+}
+
+#sns_area div:hover{
+  opacity: 0.5;
+}
+
+#profile .profile_link{
+  display: block;
+}
+
+#profile .profile_link>a{
+  padding: 0;
+  margin: 0 auto;
+  font: bold 1.6rem "Hiragino Kaku Gothic ProN","ヒラギノ角ゴ proN W3","Yu Gothic","游ゴシック","YuGothic","游ゴシック体","Meiryo","メイリオ",sans-serif;
+  background-color: rgb(204, 102, 153);
+  box-shadow: 2px 2px 0 0 rgba(51, 51, 51, 0.5);
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+#profile .profile_link>a:hover{
+  background-color: rgb(102, 153, 204);
+}
+
+#profile h2{
+  padding: 0;
+  border: none;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 0 rgb(255, 255, 255);
+  font: bold 1.8rem "Hiragino Kaku Gothic ProN","ヒラギノ角ゴ proN W3","Yu Gothic","游ゴシック","YuGothic","游ゴシック体","Meiryo","メイリオ",sans-serif;
+  background-color: rgb(153, 102, 102);
+  box-shadow: 2px 2px 0 0 rgba(51, 51, 51, 0.5);
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#profile footer{
+  background-color: rgb(204, 102, 153);
+}
+
+.profile_text{
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  color: rgb(153, 153, 153);
+  font: 1.6rem "Hiragino Kaku Gothic ProN","ヒラギノ角ゴ proN W3","Yu Gothic","游ゴシック","YuGothic","游ゴシック体","Meiryo","メイリオ",sans-serif;
+}
+
+#profile footer>p{
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font: bold 1.2rem "Hiragino Kaku Gothic ProN","ヒラギノ角ゴ proN W3","Yu Gothic","游ゴシック","YuGothic","游ゴシック体","Meiryo","メイリオ",sans-serif;
+}
+
+/* ======================================
+  1025px 以上のデバイス用のＣＳＳ（PC）
+====================================== */
+@media screen and (min-width: 1025px) {
+  /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  全ページ共通
+  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+  /*-* 初期設定 *-*-*-*-*-*-*-*-*-*-*-*/
+  .gotop{
+    font-size: 1.2rem;
+    bottom: 15px;
+    right: 0;
+    text-shadow: 1px 0 1px rgb(0, 0, 0), 0 1px 1px rgb(0, 0, 0), -1px 0 1px rgb(0, 0, 0), 0 -1px 1px rgb(0, 0, 0);
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+  }
+
+  .gotop>a{
+    width: 30px;
+    height: 120px;
+    border-radius: 10px 0 0 10px;
+    display: block;
+  }
+
+  #wrapper{
+    width: 800px;/* 任意の値 */
+    margin:0 auto;
+  }
+
+  header{
+    height: 50px;
+  }
+
+  header>h1{
+    font: bold 4.8rem "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3","Yu Mincho","游明朝","YuMincho","游明朝体","MS PMincho","ＭＳ　Ｐ明朝",serif;
+    line-height: 1.5;
+  }
+
+  header>div img{
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .snsicon{
+    margin-top: 5px;
+    font-size: 4.0rem;
+  }
+
+  nav>ul{
+    width: 800px;
+    height: 70px;
+  }
+
+  #spmenu{
+    display: none;
+  }
+
+  nav li{
+    width: 25%;
+  }
+
+  nav li>a{
+    padding: 10px 0;
+  }
+
+  .nav_now{
+    padding: 10px 0;
+  }
+
+  nav p{
+    height: 20px;
+    vertical-align:top;
+    font: bold 1.8rem "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3","Yu Mincho","游明朝","YuMincho","游明朝体","MS PMincho","ＭＳ　Ｐ明朝",serif;
+  }
+  nav p>span{
+    height: 20px;
+    vertical-align:top;
+    font: bold 1.2rem "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3","Yu Mincho","游明朝","YuMincho","游明朝体","MS PMincho","ＭＳ　Ｐ明朝",serif;
+  }
+
+  main>h2>img{
+    width: 100%;
+  }
+
+  main{
+    padding-bottom: 30px;
+  }
+
+  main>section,#newsiam{
+    padding: 10px 10px 30px 10px;
+  }
+
+  .main_text{
+    padding: 10px 30px;
+  }
+
+  .main_text_under{
+    margin-bottom: 20px;
+  }
+
+  main h2{
+    padding: 30px 0 10px 0;
+  }
+
+  main h3{
+    width: calc(100% - 20px);
+    margin: 20px 10px;
+    padding-left: 10px;
+  }
+
+  .quote_area100>iframe{
+    width: 560px;
+    height: 315px;
+  }
+
+  .quote_area50{
+    width: 50%;
+    margin: 0 10px;
+  }
+
+  .quote_area100{
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .quote_area50,.quote_area100{
+    padding: 32px 0px;
+  }
+
+  .quote_area50::before,.quote_area100::before{
+    top: 17px;
+    left: 5px;
+  }
+
+  .quote_area50::after,.quote_area100::after{
+    bottom: 16px;
+    right: 5px;
+  }
+
+  .cite50_p{
+    text-align: left;
+    position: absolute;
+  }
+
+  .cite100_p{
+    bottom: 10px;
+    left: 70px;
+  }
+
+  footer{
+    padding: 10px;
+  }
+
+  /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  #index
+  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+  #index #wrapper h2{
+    padding: 0 0 10px 0;
+  }
+
+  #index h2>p{
+    font: bold 1.6rem "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3","Yu Mincho","游明朝","YuMincho","游明朝体","MS PMincho","ＭＳ　Ｐ明朝",serif;
+    top: 220px;
+    left: 30px;
+  }
+
+  #news{
+    width: 60%;
+  }
+
+  #news tr>th{
+    width: 150px;
+  }
+
+  #news tr>td:nth-child(2){
+    padding: 0 15px 0 0;
+  }
+
+  #news table{
+    font-size: 1.4rem;
+  }
+
+  #iam{
+    width: 40%;
+  }
+
+  #iam dl{
+    width: 200px;
+  }
+
+  #iam img{
+    width: 150px;
+    height: 150px;
+  }
+
+  .prficon{
+    font-size: 3.0rem;
+    top: 90px;
+    right: 40px;
+  }
+
+  .banner_area>div:nth-child(n+2){
+    margin-top: 20px;
+  }
+
+  .banner_block p,.banner_block div{
+    width: 370px;
+  }
+
+  #index table{
+    width: 90%;
+  }
+
+  .update,.new,.info{
+    margin: 2px auto;
+    width: 50px;
+    padding: 0 2px;
+    border-radius: 5px;
+  }
+
+  #oldnews{
+    right: 23px;
+  }
+
+  #oldnews a{
+    padding: 2px;
+  }
+
+  #index h4{
+    margin: 15px 15px 0 15px;
+  }
+
+  .banner_text{
+    padding: 10px 0 10px 30px;
+  }
+
+  /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  #cont1
+  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+  .cont_evaluation,.cont_info{
+    width: 90%;
+  }
+
+  .cont_evaluation th{
+    width: 40%;
+  }
+
+  .cont_evaluation td{
+    width: 10%;
+  }
+
+  #cont1 h4{
+    margin: 15px 15px 0 15px;
+  }
+
+  #contents{
+    margin: 20px auto;
+    width: 50%;
+    padding-left: 4%;
+  }
+
+  #contents>ul{
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .li_none{
+    padding-left: 30px;
+  }
+
+  .steam_widget,.steam_widget>iframe{
+    width: 646px;
+    height: 190px;
+  }
+
+  /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  #cont2
+  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+  .diary_h3{
+    margin: 20px 10px 0 10px;
+  }
+
+  .diary_day{
+    margin: 5px 10px 20px 0;
+  }
+
+  .diary_text{
+    padding: 20px;
+    width: calc(90% - 8px);
+  }
+
+  .diary_text .img_l{
+    float: left;
+    margin:10px 20px 10px 10px;
+  }
+
+  .diary_text .img_r{
+    float: right;
+    margin:10px 10px 10px 20px;
+  }
+
+  pre{
+    white-space: pre-wrap ;
+    font: 1.6rem/2 "Hiragino Kaku Gothic ProN","ヒラギノ角ゴ proN W3","Yu Gothic","游ゴシック","YuGothic","游ゴシック体","Meiryo","メイリオ",sans-serif;
+    color: rgb(51, 0, 0);
+    text-decoration: underline rgba(153, 153, 102,0.5);
+  }
+
+  #calendar{
+    margin-top: 20px;
+  }
+
+  #calendar>div:first-child{
+    margin-right: 5px;
+  }
+
+  #calendar>div:last-child{
+    margin-left: 5px;
+  }
+
+  #calendar table{
+    width: 34%;
+  }
+
+  #calendar th,#calendar td{
+    padding: 1px 2px;
+  }
+
+  /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  #form
+  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+  #form form{
+    margin: 15px;
+    padding: 15px;
+  }
+
+  #form main th,#form main td{
+    padding: 10px;
+  }
+
+  .form_hr_span{
+    padding: 1px;
+    border-radius: 5px;
+  }
+
+  .form_p{
+    margin-top: 3px;
+  }
+
+  /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  #profile
+  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+  #profile>#wrapper{
+    width: 500px;
+  }
+
+  #profile header{
+    margin-bottom: 30px;
+  }
+
+
+  #profile header{
+    height: 220px;
+  }
+
+  #sns_area{
+    margin-top: 30px;
+  }
+
+  #sns_area img{
+    margin: 0 10px 0 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  #profile .profile_link{
+    margin-top: 30px;
+  }
+
+  #profile .profile_link>a{
+    width: 35%;
+    height: 50px;
+    border-radius: 50px;
+  }
+
+  #profile h2{
+    margin: 0 auto 3px 0;
+    width: 40%;
+    height: 50px;
+    border-radius: 0 50px 50px 0;
+  }
+
+  #profile footer{
+    padding: 10px;
+  }
+
+  .profile_text{
+    padding: 30px;
+  }
+
+  #profile footer{
+    margin-top: 30px;
+  }
+}
+
+/* ======================================
+600～1024px のデバイス用のＣＳＳ（タブレット）
+====================================== */
+@media screen and (min-width: 617px) and (max-width: 1024px) {
+  /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  全ページ共通
+  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+  /*-* 初期設定 *-*-*-*-*-*-*-*-*-*-*-*/
+  .gotop{
+    font-size: 1.2rem;
+    bottom: 15px;
+    right: 0;
+    text-shadow: 1px 0 1px rgb(0, 0, 0), 0 1px 1px rgb(0, 0, 0), -1px 0 1px rgb(0, 0, 0), 0 -1px 1px rgb(0, 0, 0);
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+  }
+
+  .gotop>a{
+    width: 30px;
+    height: 120px;
+    border-radius: 10px 0 0 10px;
+    display: block;
+  }
+
+  #wrapper{
+    width: 600px;
+    margin:0 auto;
+  }
+
+  header{
+    height: 40px;
+  }
+
+  header>h1{
+    font: bold 3.8rem "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3","Yu Mincho","游明朝","YuMincho","游明朝体","MS PMincho","ＭＳ　Ｐ明朝",serif;
+    line-height: 1.5;
+  }
+
+  header>div{
+    display: flex;
+    align-items:center;
+  }
+  header>div img{
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .snsicon{
+    margin-top: 5px;
+    font-size: 3.0rem;
+  }
+
+  nav>ul{
+    width: 600px;
+    height: 70px;
+  }
+
+  #spmenu{
+    display: none;
+  }
+
+  nav li{
+    width: 25%;
+  }
+
+  nav li>a{
+    padding: 10px 0;
+  }
+
+  .nav_now{
+    padding: 10px 0;
+  }
+
+  nav p{
+    height: 20px;
+    vertical-align:top;
+    font: bold 1.8rem "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3","Yu Mincho","游明朝","YuMincho","游明朝体","MS PMincho","ＭＳ　Ｐ明朝",serif;
+  }
+
+  nav p>span{
+    height: 20px;
+    vertical-align:top;
+    font: bold 1.2rem "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3","Yu Mincho","游明朝","YuMincho","游明朝体","MS PMincho","ＭＳ　Ｐ明朝",serif;
+  }
+
+  main>h2>img{
+    width: 100%;
+  }
+
+  main{
+    padding-bottom: 30px;
+  }
+
+  main>section,#newsiam{
+    padding: 5px 5px 15px 5px;
+  }
+
+  .main_text{
+    padding: 10px 25px;
+  }
+
+  .main_text_under{
+    margin-bottom: 20px;
+  }
+
+  main h2{
+    padding: 30px 0 10px 0;
+  }
+
+  main h3{
+    font-size: 2.0rem;
+    width: calc(100% - 20px);
+    margin: 20px 10px;
+    padding-left: 10px;
+  }
+
+  .quote_area100>iframe{
+    width: 531px;
+    height: 297px;
+  }
+
+  .quote_area50{
+    width: 90%;
+    margin: 0 10px;
+  }
+
+  .quote_area100{
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .quote_area50,.quote_area100{
+    padding: 32px 0px;
+  }
+
+  .quote_area50::before,.quote_area100::before{
+    top: 17px;
+    left: 5px;
+  }
+
+  .quote_area50::after,.quote_area100::after{
+    bottom: 16px;
+    right: 5px;
+  }
+
+  .cite50_p,.cite100_p{
+    text-align: left;
+    position: absolute;
+    margin: 5px 0 0 10px
+  }
+
+  footer{
+    padding: 10px;
+  }
+
+  /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  #index
+  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+  #index #wrapper h2{
+    padding: 0 0 0px 0;
+  }
+
+  #index h2>p{
+    font: bold 1.6rem "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3","Yu Mincho","游明朝","YuMincho","游明朝体","MS PMincho","ＭＳ　Ｐ明朝",serif;
+    top: 160px;
+    left: 20px;
+  }
+
+  #news{
+    width: 60%;
+  }
+
+  #news img{
+    width: 100%;
+  }
+
+  #news tr>td:nth-child(2){
+    padding: 0 15px 0 0;
+  }
+
+  #news table{
+    font-size: 1.3rem;
+  }
+
+  #iam{
+    width: 40%;
+  }
+
+  #iam dl{
+    width: 180px;
+  }
+
+  #iam img{
+    width: 130px;
+    height: 130px;
+  }
+
+  .prficon{
+    font-size: 3.0rem;
+    top: 70px;
+    right: 20px;
+  }
+
+  .banner_area>div:nth-child(n+2){
+    margin-top: 20px;
+  }
+
+  .banner_block p,.banner_block div{
+    width: 370px;
+  }
+
+  #index table{
+    width: 90%;
+  }
+
+  .update,.new,.info{
+    margin: 2px auto;
+    width: 35px;
+    padding: 0 2px;
+    border-radius: 5px;
+  }
+
+  #oldnews{
+    right: 17px;
+    bottom: 35px;
+  }
+
+  #oldnews a{
+    padding: 1px;
+  }
+
+  #index h4{
+    margin: 10px 10px 0 10px;
+  }
+
+  .banner_text{
+    padding: 10px 0 10px 10px;
+  }
+
+  /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  #cont1
+  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+  .cont_evaluation{
+    margin-top: 30px;
+  }
+
+  .cont_evaluation,.cont_info{
+    width: 100%;
+  }
+
+  .cont_evaluation th{
+    width: 40%;
+  }
+
+  .cont_evaluation td{
+    width: 10%;
+  }
+
+  #cont1 h4{
+    font-size: 1.8rem;
+    margin: 15px 15px 0 15px;
+  }
+
+  #contents{
+    margin: 20px auto;
+    width: 70%;
+    padding-left: 4%;
+  }
+
+  #contents>ul{
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .li_book{
+    height: 32px;
+    padding-left: 40px;
+  }
+
+  .li_none{
+    height: 32px;
+    background-position: 35px 0;
+    padding-left: 65px;
+  }
+
+  .steam_widget,.steam_widget>iframe{
+    width: 100%;
+    height: 190px;
+  }
+
+  /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  #cont2
+  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+  .diary_h3{
+    margin: 20px 10px 0 10px;
+  }
+
+  .diary_day{
+    margin: 5px 10px 20px 0;
+  }
+
+  .diary_text{
+    padding: 20px;
+    width: calc(90% - 8px);
+  }
+
+  .diary_text>img{
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  pre{
+    white-space: pre-wrap ;
+    font: 1.6rem/2 "Hiragino Kaku Gothic ProN","ヒラギノ角ゴ proN W3","Yu Gothic","游ゴシック","YuGothic","游ゴシック体","Meiryo","メイリオ",sans-serif;
+    color: rgb(51, 0, 0);
+    text-decoration: underline rgba(153, 153, 102,0.5);
+  }
+
+
+  #calendar{
+    margin-top: 20px;
+  }
+
+  #calendar>div:first-child{
+    margin-right: 5px;
+  }
+
+  #calendar>div:last-child{
+    margin-left: 5px;
+  }
+
+  #calendar table{
+    width: 34%;
+  }
+
+  #calendar th,#calendar td{
+    padding: 1px 2px;
+  }
+
+  /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  #form
+  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+  #form form{
+    margin: 15px;
+    padding: 15px;
+  }
+  #form main th,#form main td{
+    padding: 10px;
+  }
+
+  #form main th{
+    font-size: 1.4rem;
+  }
+
+  .form_hr_span{
+    padding: 1px;
+    border-radius: 5px;
+  }
+
+  .form_p{
+    margin-top: 3px;
+  }
+
+  /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  #profile
+  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+  #profile>#wrapper{
+    width: 500px;
+  }
+
+  #profile header{
+    margin-bottom: 30px;
+  }
+
+  #profile header{
+    height: 220px;
+  }
+
+  #sns_area{
+    margin-top: 30px;
+  }
+
+  #sns_area img{
+    margin: 0 10px 0 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  #profile .profile_link{
+    margin-top: 30px;
+  }
+
+  #profile .profile_link>a{
+    width: 40%;
+    height: 50px;
+    border-radius: 50px;
+  }
+
+  #profile h2{
+    margin: 0 auto 3px 0;
+    width: 40%;
+    height: 50px;
+    border-radius: 0 50px 50px 0;
+  }
+
+  #profile footer{
+    padding: 10px;
+  }
+
+  .profile_text{
+    padding: 30px;
+  }
+
+  #profile footer{
+    margin-top: 30px;
+  }
+}
+
+/* ======================================
+0～616 のデバイス用のＣＳＳ（mobile）
+====================================== */
+@media screen and (min-width: 0px) and (max-width: 616px) {
+  /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  全ページ共通
+  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+  /*-* 初期設定 *-*-*-*-*-*-*-*-*-*-*-*/
+  .gotop{
+    font-size: 1.2rem;
+    bottom: 15px;
+    right: 0;
+    text-shadow: 1px 0 1px rgb(0, 0, 0), 0 1px 1px rgb(0, 0, 0), -1px 0 1px rgb(0, 0, 0), 0 -1px 1px rgb(0, 0, 0);
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+  }
+
+  .gotop>a{
+    width: 30px;
+    height: 30px;
+    border-radius: 10px 0 0 10px;
+    display: block;
+  }
+
+  #wrapper{
+    width: 100%;
+  }
+
+  header{
+    height: 35px;
+  }
+
+  header>h1{
+    font: bold 2.6rem "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3","Yu Mincho","游明朝","YuMincho","游明朝体","MS PMincho","ＭＳ　Ｐ明朝",serif;
+    line-height: 2.2;
+  }
+
+  header>div{
+    display: flex;
+    flex-wrap:wrap;
+    align-items:center;
+  }
+
+  header>div img{
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .snsicon{
+    margin-top: 5px;
+    font-size: 2.2rem;
+  }
+
+  nav>ul{
+    width: 100%;
+  }
+
+  #spmenu{
+    width: 100%;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .menu{
+    display: none;
+  }
+
+  nav li{
+    width: 100%;
+    height: 50px;
+  }
+
+  nav li>a{
+    padding: 10px 0;
+  }
+
+  .nav_now{
+    padding: 10px 0;
+  }
+
+  nav p,nav span{
+    vertical-align: middle;
+    font: bold 1.8rem "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3","Yu Mincho","游明朝","YuMincho","游明朝体","MS PMincho","ＭＳ　Ｐ明朝",serif;
+  }
+
+  nav p>br{
+    display: none;
+  }
+
+  /*
+  nav p>span{
+    height: 20px;
+    vertical-align: middle;
+    font: bold 1.4rem "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3","Yu Mincho","游明朝","YuMincho","游明朝体","MS PMincho","ＭＳ　Ｐ明朝",serif;
+  }
+  */
+
+  main>h2>img{
+    width: 100%;
+  }
+
+  main{
+    padding-bottom: 30px;
+  }
+
+  main>section,#newsiam{
+    padding: 5px 5px 15px 5px;
+  }
+
+  .main_text{
+    padding: 10px 25px;
+  }
+
+  .main_text_under{
+    margin-bottom: 20px;
+  }
+
+  main h2{
+    padding: 30px 0 10px 0;
+  }
+
+  main h3{
+    font-size: 2.0rem;
+    width: calc(100% - 20px);
+    margin: 20px 10px;
+    padding-left: 10px;
+  }
+
+  .quote_area100>iframe{
+    width: 425px;
+    height: 238px;
+  }
+
+  .quote_area50{
+    width: 90%;
+    margin: 0 10px;
+  }
+
+  .quote_area100{
+    margin: 0 auto;
+    width: 90%;
+  }
+  .quote_area100 iframe{
+    width: 100%;
+  }
+
+  .quote_area50,.quote_area100{
+    padding: 32px 0px;
+  }
+
+  .quote_area50::before,.quote_area100::before{
+    top: 17px;
+    left: 5px;
+  }
+
+  .quote_area50::after,.quote_area100::after{
+    bottom: 16px;
+    right: 5px;
+  }
+
+  .cite50_p,.cite100_p{
+    text-align: left;
+    position: absolute;
+    margin: 5px 0 0 10px
+  }
+
+  footer{
+    padding: 10px;
+  }
+
+  footer span{
+    display: none;
+  }
+
+  /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  #index
+  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+  #index #wrapper h2{
+    padding: 0 0 0px 0;
+  }
+
+  #index h2>p{
+    display: none;
+  }
+
+  #news{
+    height: 100%;
+    padding-bottom: 25px;
+  }
+
+  #news tr>th{
+    width: 115px;
+  }
+
+  #news .sp_spn{
+    display: none;
+  }
+
+  #news img{
+    width: 100%;
+  }
+
+  #news tr>td:nth-child(2),#news tr>td:nth-child(3){
+    padding: 0 5px 0 0;
+  }
+
+  #news table{
+    font-size: 1.6rem;
+  }
+
+  #iam{
+    width: 100%;
+  }
+
+  #iam dl{
+    width: 200px;
+  }
+
+  #iam img{
+    width: 180px;
+    height: 180px;
+  }
+
+  .prficon{
+    font-size: 4.0rem;
+    top: 80px;
+    right: 30px;
+  }
+
+  .banner_area>div:nth-child(n+2){
+    margin-top: 20px;
+  }
+
+  .banner_block p,.banner_block div{
+    width: 100%;
+  }
+
+  .banner_block img{
+    width: 90%;
+    height: 90%;
+  }
+
+  #index table{
+    width: 90%;
+  }
+
+  .update,.new,.info{
+    margin: 2px auto;
+    width: 40px;
+    padding: 0 2px;
+    border-radius: 5px;
+  }
+
+  #oldnews{
+    right: 25px;
+  }
+
+  #oldnews a{
+    padding: 1px;
+  }
+
+  #index h4{
+    margin: 10px 10px 0 10px;
+  }
+
+  .banner_text{
+    padding: 10px 0 10px 10px;
+  }
+
+  /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  #cont1
+  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+  .cont_evaluation{
+    margin-top: 30px;
+  }
+
+  .cont_evaluation,.cont_info{
+    width: 100%;
+  }
+
+  .cont_evaluation th{
+    width: 40%;
+  }
+
+  .cont_evaluation td{
+    width: 10%;
+  }
+
+  #cont1 h4{
+    font-size: 1.8rem;
+    margin: 15px 15px 0 15px;
+  }
+
+  #contents{
+    margin: 20px auto;
+    width: 85%;
+    padding-left: 4%;
+  }
+
+  #contents>ul{
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .li_book{
+    padding-left: 10px;
+  }
+
+  .li_none{
+    height: 100%;
+    background-position: 35px 0;
+    padding-left: 15px;
+  }
+
+  .steam_widget,.steam_widget>iframe{
+    width: 100%;
+    height: 190px;
+  }
+
+  /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  #cont2
+  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+  .diary_h3{
+    margin: 20px 10px 0 10px;
+  }
+
+  .diary_day{
+    margin: 5px 10px 20px 0;
+  }
+
+  .diary_text{
+    padding: 20px;
+    width: calc(90% - 8px);
+  }
+
+  .diary_text>img{
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  pre{
+    white-space: pre-wrap ;
+    font: 1.6rem/2 "Hiragino Kaku Gothic ProN","ヒラギノ角ゴ proN W3","Yu Gothic","游ゴシック","YuGothic","游ゴシック体","Meiryo","メイリオ",sans-serif;
+    color: rgb(51, 0, 0);
+    text-decoration: underline rgba(153, 153, 102,0.5);
+  }
+
+  #calendar{
+    margin-top: 20px;
+  }
+
+  #calendar>div:first-child{
+    margin-right: 5px;
+  }
+
+  #calendar>div:last-child{
+    margin-left: 5px;
+  }
+
+  #calendar table{
+    width: 34%;
+  }
+
+  #calendar th,#calendar td{
+    padding: 1px 2px;
+  }
+
+  /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  #form
+  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+  #form form{
+    margin: 15px 0;
+    padding: 15px 0;
+  }
+
+  #form input,#form textarea{
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  #form main tr{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  #form main th,#form main td{
+    padding: 10px;
+  }
+
+  #form main th{
+    font-size: 1.4rem;
+    display: flex;
+    justify-content:center;
+    width: 100%;
+  }
+
+  .form_hr_span{
+    margin-left: 5px;
+    padding: 0 1px 0 1px;
+    border-radius: 5px;
+  }
+
+  .form_p{
+    margin-top: 3px;
+  }
+
+  /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  #profile
+  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+  #profile>#wrapper{
+    width: 100%;
+  }
+
+  #profile header{
+    margin-bottom: 30px;
+  }
+  #profile header img{
+    width: 100%;
+  }
+
+  #profile header{
+    height: calc(100% + 30px);
+  }
+
+  #sns_area{
+    margin-top: 30px;
+  }
+
+  #sns_area img{
+    margin: 0 10px 0 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  #profile .profile_link{
+    margin-top: 30px;
+  }
+
+  #profile .profile_link>a{
+    width: 50%;
+    height: 50px;
+    border-radius: 50px;
+  }
+
+  #profile h2{
+    margin: 0 auto 3px 0;
+    width: 50%;
+    height: 50px;
+    border-radius: 0 50px 50px 0;
+  }
+
+  #profile footer{
+    padding: 10px;
+  }
+
+  .profile_text{
+    padding: 30px;
+  }
+
+  #profile footer{
+    margin-top: 30px;
+  }
+}
