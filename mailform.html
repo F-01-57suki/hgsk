@@ -116,16 +116,16 @@
       const menu=document.getElementsByClassName("menu");
       const spmenu=document.getElementById("spmenu");
       let flag=false;
-      spmenu.innerHTML='<p>OPEN&nbsp;<i class="fas fa-grip-lines"></i></p>';
-      //関数
+      spmenu.innerHTML='<p>OPEN&nbsp;<i class="fas fa-bars"></i></p>';
+      //メニュー開閉
       $("#spmenu").click(function(){
         if(flag){
-            $(".menu").fadeOut("fast","linear");
-            spmenu.innerHTML='<p>OPEN&nbsp;<i class="fas fa-grip-lines"></i></p>';
+            $(".menu").slideUp("fast","swing");
+            spmenu.innerHTML='<p>OPEN&nbsp;<i class="fas fa-bars"></i></p>';
           flag=!flag;
         }
         else{
-            $(".menu").fadeIn("fast","linear");
+            $(".menu").slideDown("fast","swing");
             spmenu.innerHTML='<p>CLOSE&nbsp;<i class="fas fa-times"></i></p>';
           flag=!flag;
         }
